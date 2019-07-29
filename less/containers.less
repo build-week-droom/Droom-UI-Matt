@@ -1,0 +1,50 @@
+
+
+.container.root {
+    .flex();
+    font-size: 2rem;
+    font-family: @font;
+    max-width: 100%;
+    background: @second;
+    h1, h2, h3 {
+        font-weight: 900
+    }
+}
+.container.content {
+    h2 {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+.container.sign-up {
+    .flex(row, center, center);
+    width: 100%;
+    .btn {
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 5rem 0;
+        background: @second;
+        border-radius: 1rem;
+        color: @font-color;
+        text-decoration: none;
+        margin: 3rem 0 0;
+    }
+}
+.container.art {
+    .flex(row, center, flex-end);
+        img {
+            max-width: 70%;
+            transform: translate(0, 4rem)
+        }
+    &#swipe {
+        img.hand {
+            position: absolute;
+            margin-right: 20rem;
+            transform: translate(-15rem, 4rem);
+            width: 25rem;
+            .new-frames(~"swipe", transform, translate(-15rem, 4rem), translate(8rem, 4rem)); 
+            .loop-frames(~"swipe", 1000ms);
+        }
+    }
+}

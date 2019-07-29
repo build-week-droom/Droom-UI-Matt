@@ -1,0 +1,28 @@
+header {
+    .flex();
+    padding: 2rem 0;
+    width: 100%;
+    background: @second;
+    h1 {
+        font-family: @logo;
+        font-size: 4rem;
+    }
+    nav{
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: @font-color;
+        }
+        transition: ease-in 1000ms;
+        display: none;
+    }
+    &:hover {
+        nav {
+            display: unset;
+            .flex(row, space-evenly, center);
+            width: 100%;
+            padding-top: 1rem;
+        
+        }
+    }
+}

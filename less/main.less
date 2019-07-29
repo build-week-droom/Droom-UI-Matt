@@ -1,0 +1,30 @@
+.container.root {
+    .jumbo {
+        .flex();
+        .fg {
+            .flex();
+            position: absolute;
+            width: 100%;
+            background: @main-dark;
+            h1 {
+                display: block;
+                text-align: center;
+                font-size: 4rem;
+                position: absolute;
+            }
+        }
+        img {
+            max-width:100%;
+            box-shadow: inset 0 0 0 1000px rgba(158, 108, 199, 0.525);
+        }
+    }
+    .step {
+        .flex();
+        width: 80%;
+        padding: 4rem;
+        background-color: @main;
+        background-image: @bg;
+        border-radius: 1rem;
+        margin: 2rem;
+    }
+}

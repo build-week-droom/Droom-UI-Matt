@@ -1,0 +1,27 @@
+.flex(@direction:column, @justify:center, @align:center) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.new-frames(@name, @prop, @from, @to) {
+    @keyframes @name {
+        from {
+            @{prop}: @from;
+        }
+        to {
+            @{prop}: @to;
+        }
+    }
+}
+
+.loop-frames(@name, @duration) {
+    animation-name: @name;
+    animation-duration: @duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+.link-reset() {
+    
+}
