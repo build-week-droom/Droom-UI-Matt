@@ -126,7 +126,6 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='#545454' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-color: #ecedee;
 }
 * {
@@ -157,6 +156,7 @@ body {
   src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLRw.ttf) format('truetype');
 }
 .container.root {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,21 +170,46 @@ body {
 .container.root h3 {
   font-weight: 900;
 }
-.container.root .number {
+.container.root .step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  padding: 4rem 4rem;
+}
+.container.root .step .number {
+  width: 375px;
   padding-bottom: 1rem;
 }
-.container.root .number img {
+.container.root .step .number img {
   width: 50px;
 }
-.container.root .number#one {
+.container.root .step .number#one {
   padding-bottom: 25rem;
 }
-.container.root .number#two {
+.container.root .step .number#two {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
+}
+.container.root #sign-up {
+  padding-top: unset;
+  height: 60rem;
+  color: black;
+  background-image: url("../img/job2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container.root #swipe-right {
+  background: #B6CCA1;
+  color: #ecedee;
+}
+.container.root #get-hired {
+  background: #30011E;
+  color: #B68F40;
 }
 .container.content h2 {
   font-size: 4rem;
@@ -265,59 +290,6 @@ body {
 .container.steps .logo {
   font-family: 'Monoton', cursive;
 }
-.container.root {
-  width: 100%;
-}
-.container.root .jumbo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container.root .jumbo .fg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  background: #545454;
-}
-.container.root .jumbo .fg h1 {
-  display: block;
-  text-align: center;
-  font-size: 4rem;
-  position: absolute;
-}
-.container.root .jumbo img {
-  max-width: 100%;
-  box-shadow: inset 0 0 0 1000px rgba(158, 108, 199, 0.525);
-}
-.container.root .step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 4rem 4rem;
-}
-.container.root #sign-up {
-  padding-top: unset;
-  height: 60rem;
-  color: black;
-  background-image: url("../img/job2.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.container.root #swipe-right {
-  background: #B6CCA1;
-  color: #ecedee;
-}
-.container.root #get-hired {
-  background: #30011E;
-  color: #B68F40;
-}
 header {
   display: flex;
   flex-direction: column;
@@ -348,4 +320,11 @@ header:hover nav {
   align-items: center;
   width: 100%;
   padding-top: 1rem;
+}
+.container.root footer {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background: #B68F40;
+  color: #30011E;
 }
