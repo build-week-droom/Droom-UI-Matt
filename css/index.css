@@ -214,6 +214,8 @@ body {
 }
 .step h2 {
   font-size: 4rem;
+}
+.step h3 {
   padding-bottom: 2rem;
 }
 .step .content,
@@ -404,6 +406,7 @@ body {
   position: absolute;
   margin-right: 20rem;
   height: 15rem;
+  opacity: 0.8;
   animation-name: swipe;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -434,17 +437,22 @@ body {
 }
 @media screen and (min-width: 600px) {
   .container.art#dollars img {
-    width: 180px;
+    width: 18rem;
   }
 }
 @media screen and (min-width: 800px) {
   .container.art#dollars img {
-    width: 350px;
+    width: 35rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .container.art#dollars img {
-    width: 600px;
+    width: 50rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container.art#dollars img {
+    width: 60rem;
   }
 }
 .container.art#dollars #dollar2 {
