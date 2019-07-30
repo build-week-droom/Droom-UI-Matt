@@ -1,6 +1,7 @@
 .container.steps {
     .flex(row, center, center);
     background: @Brass;
+    background-image: @bg-brass;
     width: 100%;
     img {
         height: 5rem;
@@ -14,7 +15,7 @@
 .step {
     .flex();
     width: 100%;
-    padding: 4rem 4rem;
+    padding: 0 4rem;
     .number {
         padding-bottom: 1rem;
         img {
@@ -28,15 +29,14 @@
         font-size: 4rem;
         padding-bottom: 2rem;
     }
-    .content {
+    .content, .art {
         width: 400px;
         .flex(column, center, flex-start);
-        @media @mobile {
-            height: 40rem;
-        }
-        @media @tablet {
-            height: 60rem;
-        }
+        height: 30rem;
+        .expand(@mobile, 30rem, height);
+        .expand(@tablet, 40rem, height);
+        .expand(@desktop-small, 60rem, height);
+        .expand(@desktop-small, 0 6rem, padding);
     }
     .content, .art{
         .expand(@mobile, 48%);
@@ -60,15 +60,21 @@
         background: @Laurel-Green;
         background-image: @bg-swipe;
         color: @Shell;
-        .content {
-            height: unset;
+        .content { 
             .flex(column, center, flex-end);
+            .expand(@desktop-small, @bg-laptop, background-image)
         }
+        .expand(@desktop-small, 0, padding);
     }
     &#get-hired {
         background: @dark-sienna;
         background-image: @bg-hired;
         color: @Brass;
+        .content { 
+            .expand(@desktop-small, @bg-shake, background-image)
+        }
+        .expand(@desktop-small, 0, padding);
+        .expand(@desktop-small, @dark-sienna, color);
     }
 }
 .container.btn {
@@ -78,19 +84,18 @@
         text-align: center;
         display: block;
         width: 100%;
-        padding: 1rem 0;
+        padding: 2rem 0;
         background: @Nyanza;
         border-radius: 1rem;
         color: @font-color;
         text-decoration: none;
-        margin: 3rem 0 0;
+        margin: 3rem 0;
+        .expand(@mobile, 3rem 0, padding);
+        .expand(@tablet, 4rem 0, padding);
     }
 }
 .container.art {
     .flex(row, center, flex-end);
-        img {
-            transform: translate(0, 4rem)
-        }
     &#swipe {
         width: 100%;
         .expand(@mobile, 50%);
@@ -105,7 +110,7 @@
             width: 24rem;
             .expand(@mobile, 18rem);
             .expand(@tablet, 24rem);
-            .new-frames(~"swipe", transform, translate(-15rem, 4rem), translate(8rem, 4rem)); 
+            .new-frames(~"swipe", transform, translate(-15rem, 0), translate(8rem, 0)); 
             .loop-frames(~"swipe", 1000ms);
         }
     }

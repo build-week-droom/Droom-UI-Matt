@@ -9,15 +9,26 @@ header {
         font-size: 4rem;
         .expand(@mobile, 1rem, margin-left);
     }
+    .menu {
+        .flex();
+        position: absolute;
+        transform: translate(40vw, 0);
+        width: 7rem;
+        height: 5rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+        .expand(@mobile, none, display);
+    }
     nav{
         a {
+            width: 100%;
+            font-size: 2rem;
             display: inline-block;
             text-decoration: none;
+            text-align: center;
             color: @font-color;
         }
         width: 100%;
-        padding-top: 1rem;
-        transition: ease-in 1000ms;
         display: none;
         .expand(@mobile, 40rem);
         .expand(@mobile, 1rem, margin-right);
@@ -25,7 +36,20 @@ header {
     }
     &:hover {
         nav {
-            .flex(row, space-evenly, center);
+            border-top: 1px solid black;
+            margin-top: 1rem;
+            .flex(column, space-evenly, center);
+            a {
+                padding: 2rem 0;
+                border-bottom: 1px solid black;
+                .expand(@mobile, 0 0, padding);
+                .expand(@mobile, unset, border)
+            }
+            .flex-break();
+            .expand(@mobile, unset, border);
+        }
+        .menu {
+            display: none;
         }
     }
 }
