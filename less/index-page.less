@@ -1,7 +1,6 @@
 .container.steps {
     .flex(row, center, center);
-    background: @Brass;
-    background-image: @bg-brass;
+    .custom-bg(@Brass, @bg-brass);
     width: 100%;
     img {
         height: 5rem;
@@ -27,10 +26,6 @@
     }
     h2 {
         font-size: 4rem;
-    }
-    h3 {
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
     }
     .content, .art {
         width: 400px;
@@ -62,8 +57,7 @@
     &#swipe-right {
         .flex-break(@mobile, row-reverse, space-between, center);
         text-align: center;
-        background: @Laurel-Green;
-        background-image: @bg-swipe;
+        .custom-bg(@Laurel-Green, @bg-swipe);
         color: @Shell;
         .seperator();
         .content { 
@@ -73,8 +67,7 @@
         .expand(@desktop-small, 0, padding);
     }
     &#get-hired {
-        background: @dark-sienna;
-        background-image: @bg-hired;
+        .custom-bg(@dark-sienna, @bg-hired);
         color: @Brass;
         .seperator();
         .content { 
