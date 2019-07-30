@@ -5,7 +5,6 @@
     font-size: 2rem;
     font-family: @font;
     max-width: 100%;
-    background: @Davy-Grey;
     h1, h2, h3 {
         font-weight: 900
     }
@@ -16,14 +15,14 @@
         padding-bottom: 2rem;
     }
 }
-.container.sign-up {
+.container.btn {
     .flex(row, center, center);
     width: 100%;
     .btn {
         text-align: center;
         display: block;
         width: 100%;
-        padding: 5rem 0;
+        padding: 1rem 0;
         background: @Nyanza;
         border-radius: 1rem;
         color: @font-color;
@@ -34,7 +33,6 @@
 .container.art {
     .flex(row, center, flex-end);
         img {
-            max-width: 70%;
             transform: translate(0, 4rem)
         }
     &#swipe {
@@ -47,4 +45,21 @@
             .loop-frames(~"swipe", 1000ms);
         }
     }
+    &#dollars {
+        height: 300px;
+        .flex();
+        img {
+            width: 280px;
+        }
+        #dollar2 {
+            position: absolute;
+            transform: translate(2rem, 1rem)
+        }
+        #dollar1 {
+        }
+    }
+}
+.container.steps {
+    height: 80px;
+    width: 100%;
 }

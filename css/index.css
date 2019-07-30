@@ -129,6 +129,10 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='#545454' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-color: #ecedee;
 }
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 /* Colors */
 /* Backgrounds */
 @font-face {
@@ -160,7 +164,6 @@ body {
   font-size: 2rem;
   font-family: 'Lato', sans-serif;
   max-width: 100%;
-  background: #545454;
 }
 .container.root h1,
 .container.root h2,
@@ -171,18 +174,18 @@ body {
   font-size: 4rem;
   padding-bottom: 2rem;
 }
-.container.sign-up {
+.container.btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.container.sign-up .btn {
+.container.btn .btn {
   text-align: center;
   display: block;
   width: 100%;
-  padding: 5rem 0;
+  padding: 1rem 0;
   background: #D7FCD4;
   border-radius: 1rem;
   color: #262626;
@@ -196,7 +199,6 @@ body {
   align-items: flex-end;
 }
 .container.art img {
-  max-width: 70%;
   transform: translate(0, 4rem);
 }
 .container.art#swipe img.hand {
@@ -216,6 +218,27 @@ body {
   to {
     transform: translate(8rem, 4rem);
   }
+}
+.container.art#dollars {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container.art#dollars img {
+  width: 280px;
+}
+.container.art#dollars #dollar2 {
+  position: absolute;
+  transform: translate(2rem, 1rem);
+}
+.container.steps {
+  height: 80px;
+  width: 100%;
+}
+.container.root {
+  width: 100%;
 }
 .container.root .jumbo {
   display: flex;
@@ -247,14 +270,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  padding: 4rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='#545454' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  border-radius: 1rem;
-  margin: 2rem;
+  width: 100%;
+  padding: 4rem 4rem;
 }
-.container.root .step#sign-up {
-  background: #ecedee;
+.container.root #sign-up {
+  height: 700px;
+  background-image: url("../img/job2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container.root #swipe-right {
+  background: #B6CCA1;
+}
+.container.root #get-hired {
+  background: #30011E;
+  color: whitesmoke;
 }
 header {
   display: flex;

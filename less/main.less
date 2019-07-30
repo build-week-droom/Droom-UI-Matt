@@ -1,4 +1,5 @@
 .container.root {
+    width: 100%;
     .jumbo {
         .flex();
         .fg {
@@ -19,14 +20,23 @@
         }
     }
     .step {
-        &#sign-up {
-            background: @Shell;
-        }
         .flex();
-        width: 80%;
-        padding: 4rem;
-        background-image: @bg;
-        border-radius: 1rem;
-        margin: 2rem;
+        width: 100%;
+        padding: 4rem 4rem;
     }
+    #sign-up {
+        height: 700px;
+        background-image:@bg-job;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #swipe-right {
+        background: @Laurel-Green;
+    }
+    #get-hired {
+        background: @dark-sienna;
+        color: whitesmoke;
+    }
+    
 }
