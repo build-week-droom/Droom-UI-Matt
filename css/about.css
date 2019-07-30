@@ -243,6 +243,14 @@ body {
     width: 50%;
   }
 }
+@media screen and (min-width: 600px) {
+  .container.root .members .member:nth-child(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 header {
   display: flex;
   flex-direction: column;

@@ -31,6 +31,9 @@
                 .expand(@mobile, 50%);
                 .flex(column, flex-start, flex-start);
             }
+            &:nth-child(2n) {
+                .flex-break(@mobile, row-reverse);
+            }
         }
     }
 }
