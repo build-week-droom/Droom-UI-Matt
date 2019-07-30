@@ -1,11 +1,13 @@
 header {
     .flex();
+    .flex-break();
     padding: 2rem 0;
     width: 100%;
     background: @Shell;
     h1 {
         font-family: @logo;
         font-size: 4rem;
+        .expand(@mobile, 1rem, margin-left);
     }
     nav{
         a {
@@ -13,16 +15,17 @@ header {
             text-decoration: none;
             color: @font-color;
         }
+        width: 100%;
+        padding-top: 1rem;
         transition: ease-in 1000ms;
         display: none;
+        .expand(@mobile, 40rem);
+        .expand(@mobile, 1rem, margin-right);
+        .flex-break();
     }
     &:hover {
         nav {
-            display: unset;
             .flex(row, space-evenly, center);
-            width: 100%;
-            padding-top: 1rem;
-        
         }
     }
 }

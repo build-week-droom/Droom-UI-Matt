@@ -23,9 +23,15 @@
     animation-timing-function: ease-out;
 }
 
-.expand(@bp:@mobile, @per:100%) {
+.expand(@bp:@mobile, @value:100%) {
     @media @bp {
-        width: @per;
+        width: @value;
+    }
+}
+
+.expand(@bp, @value, @property) {
+    @media @bp {
+        @{property}: @value;
     }
 }
 

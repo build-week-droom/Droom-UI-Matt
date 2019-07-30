@@ -166,6 +166,14 @@ body {
   font-family: 'Lato', sans-serif;
   max-width: 100%;
 }
+@media screen and (min-width: 800px) {
+  .container.root {
+    font-size: 2rem;
+  }
+}
+.container.root * {
+  transition: ease 500ms;
+}
 .container.root h1,
 .container.root h2,
 .container.root h3 {
@@ -328,7 +336,7 @@ body {
   }
 }
 .container.art#swipe img {
-  width: 50rem;
+  width: 40rem;
 }
 @media screen and (min-width: 600px) {
   .container.art#swipe img {
@@ -343,7 +351,7 @@ body {
 .container.art#swipe img.hand {
   position: absolute;
   margin-right: 20rem;
-  width: 28rem;
+  width: 24rem;
   animation-name: swipe;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -387,6 +395,11 @@ body {
     width: 350px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container.art#dollars img {
+    width: 600px;
+  }
+}
 .container.art#dollars #dollar2 {
   position: absolute;
   transform: translate(2rem, 1rem);
@@ -400,11 +413,26 @@ header {
   width: 100%;
   background: #ecedee;
 }
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 header h1 {
   font-family: 'Monoton', cursive;
   font-size: 4rem;
 }
+@media screen and (min-width: 600px) {
+  header h1 {
+    margin-left: 1rem;
+  }
+}
 header nav {
+  width: 100%;
+  padding-top: 1rem;
   transition: ease-in 1000ms;
   display: none;
 }
@@ -413,14 +441,29 @@ header nav a {
   text-decoration: none;
   color: #262626;
 }
+@media screen and (min-width: 600px) {
+  header nav {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  header nav {
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 header:hover nav {
-  display: unset;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  padding-top: 1rem;
 }
 .container.root footer {
   text-align: center;

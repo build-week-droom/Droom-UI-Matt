@@ -95,14 +95,14 @@
         width: 100%;
         .expand(@mobile, 50%);
         img{
-            width: 50rem;
+            width: 40rem;
             .expand(@mobile, 20rem);
             .expand(@tablet, 40rem);
         }
         img.hand {
             position: absolute;
             margin-right: 20rem;
-            width: 28rem;
+            width: 24rem;
             .expand(@mobile, 18rem);
             .expand(@tablet, 24rem);
             .new-frames(~"swipe", transform, translate(-15rem, 4rem), translate(8rem, 4rem)); 
@@ -116,6 +116,7 @@
             width: 280px;
             .expand(@mobile, 180px);
             .expand(@tablet, 350px);
+            .expand(@desktop-small, 600px);
         }
         #dollar2 {
             position: absolute;
