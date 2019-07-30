@@ -1,0 +1,36 @@
+.container.root {
+    .flex();
+    .members {
+        .flex();
+        width: 100%;
+        font-size: 2rem;
+        background: @Laurel-Green;
+        background-image: @bg-circuit;
+        h1 {
+            font-size: 6rem;
+            padding: 2rem;
+        }
+        .member {
+            .flex();
+            .flex-break();
+            width: 100%;
+            .expand(@mobile, 70rem);
+            height: 50rem;
+            .expand(@mobile, 40rem, height);
+            padding: 1rem;
+            h2 {
+                font-size: 4rem;
+            }
+            h3 {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+            .desc {
+                width: 31rem;
+                padding: 1rem; 
+                .expand(@mobile, 50%);
+                .flex(column, flex-start, flex-start);
+            }
+        }
+    }
+}
