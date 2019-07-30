@@ -30,15 +30,24 @@
     }
     .content {
         width: 400px;
+        .flex(column, center, flex-start);
+        @media @mobile {
+            height: 40rem;
+        }
+        @media @tablet {
+            height: 60rem;
+        }
     }
     .content, .art{
         .expand(@mobile, 48%);
     }
-    .content {
-        .flex-break(@mobile, column, space-betweem, center);
-    }
     .flex-break();
     &#sign-up {
+        .content, .btn {
+            .expand(@mobile, 650px)
+        }
+        .flex(column, center, flex-start);
+        .flex-break(@mobile, column, center, center);
         color: black;
         background-image:@bg-job;
         background-attachment:fixed;
@@ -46,12 +55,19 @@
         background-size: cover;
     }
     &#swipe-right {
+        .flex-break(@mobile, row-reverse, space-evenly, center);
         text-align: center;
         background: @Laurel-Green;
+        background-image: @bg-swipe;
         color: @Shell;
+        .content {
+            height: unset;
+            .flex(column, center, flex-end);
+        }
     }
     &#get-hired {
         background: @dark-sienna;
+        background-image: @bg-hired;
         color: @Brass;
     }
 }
@@ -76,11 +92,19 @@
             transform: translate(0, 4rem)
         }
     &#swipe {
+        width: 100%;
+        .expand(@mobile, 50%);
+        img{
+            width: 50rem;
+            .expand(@mobile, 20rem);
+            .expand(@tablet, 40rem);
+        }
         img.hand {
             position: absolute;
             margin-right: 20rem;
-            transform: translate(-15rem, 4rem);
-            width: 25rem;
+            width: 28rem;
+            .expand(@mobile, 18rem);
+            .expand(@tablet, 24rem);
             .new-frames(~"swipe", transform, translate(-15rem, 4rem), translate(8rem, 4rem)); 
             .loop-frames(~"swipe", 1000ms);
         }
@@ -90,6 +114,8 @@
         .flex();
         img {
             width: 280px;
+            .expand(@mobile, 180px);
+            .expand(@tablet, 350px);
         }
         #dollar2 {
             position: absolute;
