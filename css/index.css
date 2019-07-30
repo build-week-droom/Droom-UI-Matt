@@ -171,6 +171,21 @@ body {
 .container.root h3 {
   font-weight: 900;
 }
+.container.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #B68F40;
+  width: 100%;
+}
+.container.steps img {
+  height: 5rem;
+  padding: 1rem 0;
+}
+.container.steps .logo {
+  font-family: 'Monoton', cursive;
+}
 .step {
   display: flex;
   flex-direction: column;
@@ -191,9 +206,19 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+.step h2 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
 .step .content,
 .step .number {
-  width: 600px;
+  width: 400px;
+}
+@media screen and (min-width: 600px) {
+  .step .content,
+  .step .number {
+    width: 100%;
+  }
 }
 .step#sign-up {
   color: black;
@@ -207,13 +232,31 @@ body {
   background: #B6CCA1;
   color: #ecedee;
 }
+@media screen and (min-width: 600px) {
+  .step#swipe-right .content,
+  .step#swipe-right .art {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .step#swipe-right .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-betweem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .step#swipe-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .step#get-hired {
   background: #30011E;
   color: #B68F40;
-}
-.container.content h2 {
-  font-size: 4rem;
-  padding-bottom: 2rem;
 }
 .container.btn {
   display: flex;

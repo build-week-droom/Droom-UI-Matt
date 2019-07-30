@@ -1,3 +1,16 @@
+.container.steps {
+    .flex(row, center, center);
+    background: @Brass;
+    width: 100%;
+    img {
+        height: 5rem;
+        padding: 1rem 0;
+    }
+    .logo {
+        font-family: @logo;
+    }
+}
+
 .step {
     .flex();
     width: 100%;
@@ -11,8 +24,13 @@
             .flex(row-reverse, flex-start, center);
         }
     }
+    h2 {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
     .content, .number {
-        width: 600px;
+        width: 400px;
+        .expand();
     }
     &#sign-up {
         color: black;
@@ -24,18 +42,18 @@
     &#swipe-right {
         text-align: center;
         background: @Laurel-Green;
-        color: @Shell
+        color: @Shell;
+        .content, .art{
+            .expand(@mobile, 48%);
+        }
+        .content {
+            .flex-break(@mobile, column, space-betweem, center);
+        }
+        .flex-break();
     }
     &#get-hired {
         background: @dark-sienna;
         color: @Brass;
-    }
-}
-
-.container.content {
-    h2 {
-        font-size: 4rem;
-        padding-bottom: 2rem;
     }
 }
 .container.btn {

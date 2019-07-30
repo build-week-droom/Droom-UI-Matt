@@ -22,3 +22,15 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
 }
+
+.expand(@bp:@mobile, @per:100%) {
+    @media @bp {
+        width: @per;
+    }
+}
+
+.flex-break(@bp:@mobile, @direction: row, @justify:space-between, @align:center) {
+    @media @bp {
+        .flex(@direction, @justify, @align)
+    }
+}
