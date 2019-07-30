@@ -210,14 +210,29 @@ body {
   font-size: 4rem;
   padding-bottom: 2rem;
 }
-.step .content,
-.step .number {
+.step .content {
   width: 400px;
 }
 @media screen and (min-width: 600px) {
   .step .content,
-  .step .number {
-    width: 100%;
+  .step .art {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .step .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-betweem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .step {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .step#sign-up {
@@ -231,28 +246,6 @@ body {
   text-align: center;
   background: #B6CCA1;
   color: #ecedee;
-}
-@media screen and (min-width: 600px) {
-  .step#swipe-right .content,
-  .step#swipe-right .art {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .step#swipe-right .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-betweem;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 600px) {
-  .step#swipe-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 .step#get-hired {
   background: #30011E;

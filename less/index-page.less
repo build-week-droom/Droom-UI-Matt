@@ -28,10 +28,16 @@
         font-size: 4rem;
         padding-bottom: 2rem;
     }
-    .content, .number {
+    .content {
         width: 400px;
-        .expand();
     }
+    .content, .art{
+        .expand(@mobile, 48%);
+    }
+    .content {
+        .flex-break(@mobile, column, space-betweem, center);
+    }
+    .flex-break();
     &#sign-up {
         color: black;
         background-image:@bg-job;
@@ -43,13 +49,6 @@
         text-align: center;
         background: @Laurel-Green;
         color: @Shell;
-        .content, .art{
-            .expand(@mobile, 48%);
-        }
-        .content {
-            .flex-break(@mobile, column, space-betweem, center);
-        }
-        .flex-break();
     }
     &#get-hired {
         background: @dark-sienna;
