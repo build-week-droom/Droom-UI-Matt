@@ -326,6 +326,11 @@ header:hover {
     padding-bottom: 2rem;
   }
 }
+@media screen and (min-width: 600px) {
+  header:hover {
+    position: unset;
+  }
+}
 header:hover nav {
   border-top: 1px solid black;
   margin-top: 1rem;
