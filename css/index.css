@@ -352,6 +352,7 @@ body {
   width: 100%;
 }
 .container.btn .btn {
+  font-weight: 900;
   text-align: center;
   display: block;
   width: 100%;
@@ -523,6 +524,16 @@ header nav a {
     align-items: center;
   }
 }
+header:hover {
+  padding-bottom: 0;
+  position: fixed;
+  top: 0;
+}
+@media screen and (min-width: 600px) {
+  header:hover {
+    padding-bottom: 2rem;
+  }
+}
 header:hover nav {
   border-top: 1px solid black;
   margin-top: 1rem;
@@ -556,6 +567,11 @@ header:hover nav a {
 @media screen and (min-width: 600px) {
   header:hover nav {
     border: unset;
+  }
+}
+@media screen and (min-width: 600px) {
+  header:hover nav {
+    margin-top: unset;
   }
 }
 header:hover .menu {

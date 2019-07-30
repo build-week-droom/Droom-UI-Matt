@@ -35,6 +35,10 @@ header {
         .flex-break();
     }
     &:hover {
+        padding-bottom: 0;
+        position: fixed;
+        top: 0;
+        .expand(@mobile, 2rem, padding-bottom);
         nav {
             border-top: 1px solid black;
             margin-top: 1rem;
@@ -47,6 +51,7 @@ header {
             }
             .flex-break();
             .expand(@mobile, unset, border);
+            .expand(@mobile, unset, margin-top);
         }
         .menu {
             display: none;
