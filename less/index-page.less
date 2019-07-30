@@ -29,7 +29,8 @@
         font-size: 4rem;
     }
     h3 {
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
     }
     .content, .art {
         width: 400px;
@@ -46,6 +47,7 @@
     }
     .flex-break();
     &#sign-up {
+        .seperator();
         .content, .btn {
             .expand(@mobile, 650px)
         }
@@ -63,6 +65,7 @@
         background: @Laurel-Green;
         background-image: @bg-swipe;
         color: @Shell;
+        .seperator();
         .content { 
             .flex(column, center, flex-end);
             .expand(@desktop-small, @bg-laptop, background-image)
@@ -73,6 +76,7 @@
         background: @dark-sienna;
         background-image: @bg-hired;
         color: @Brass;
+        .seperator();
         .content { 
             .expand(@desktop-small, @bg-shake, background-image)
         }

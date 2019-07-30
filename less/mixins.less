@@ -23,6 +23,14 @@
     animation-timing-function: ease-out;
 }
 
+.seperator() {
+    h3 {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color;
+    }
+}
+
 .expand(@bp:@mobile, @value:100%) {
     @media @bp {
         width: @value;
