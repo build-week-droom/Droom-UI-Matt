@@ -252,6 +252,12 @@ body {
 @media screen and (min-width: 600px) {
   .step .content,
   .step .art {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .step .content,
+  .step .art {
     width: 48%;
   }
 }
@@ -298,7 +304,7 @@ body {
   .step#swipe-right {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -381,35 +387,30 @@ body {
   }
 }
 .container.art#swipe img {
-  width: 40rem;
-}
-@media screen and (min-width: 600px) {
-  .container.art#swipe img {
-    width: 20rem;
-  }
+  height: 25rem;
 }
 @media screen and (min-width: 800px) {
   .container.art#swipe img {
-    width: 40rem;
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container.art#swipe img {
+    height: 50rem;
   }
 }
 .container.art#swipe img.hand {
   position: absolute;
   margin-right: 20rem;
-  width: 24rem;
+  height: 15rem;
   animation-name: swipe;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
   .container.art#swipe img.hand {
-    width: 18rem;
-  }
-}
-@media screen and (min-width: 800px) {
-  .container.art#swipe img.hand {
-    width: 24rem;
+    height: 35rem;
   }
 }
 @keyframes swipe {

@@ -37,6 +37,7 @@
         .expand(@tablet, 40rem, height);
         .expand(@desktop-small, 60rem, height);
         .expand(@desktop-small, 0 6rem, padding);
+        .expand(@mobile, 50%)
     }
     .content, .art{
         .expand(@mobile, 48%);
@@ -55,7 +56,7 @@
         background-size: cover;
     }
     &#swipe-right {
-        .flex-break(@mobile, row-reverse, space-evenly, center);
+        .flex-break(@mobile, row-reverse, space-between, center);
         text-align: center;
         background: @Laurel-Green;
         background-image: @bg-swipe;
@@ -100,16 +101,15 @@
         width: 100%;
         .expand(@mobile, 50%);
         img{
-            width: 40rem;
-            .expand(@mobile, 20rem);
-            .expand(@tablet, 40rem);
+            height: 25rem;
+            .expand(@tablet, 30rem, height);
+            .expand(@desktop-small, 50rem, height);
         }
         img.hand {
             position: absolute;
             margin-right: 20rem;
-            width: 24rem;
-            .expand(@mobile, 18rem);
-            .expand(@tablet, 24rem);
+            height: 15rem;
+            .expand(@desktop-small, 35rem, height);
             .new-frames(~"swipe", transform, translate(-15rem, 0), translate(8rem, 0)); 
             .loop-frames(~"swipe", 1000ms);
         }
