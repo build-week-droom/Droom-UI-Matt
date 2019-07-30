@@ -3,33 +3,30 @@
     width: 100%;
     padding: 4rem 4rem;
     .number {
-        width: 375px;
         padding-bottom: 1rem;
         img {
             width: 50px;
-        }
-        &#one {
-            padding-bottom: 25rem;
         }
         &#two {
             .flex(row-reverse, flex-start, center);
         }
     }
-
-    #sign-up {
-        padding-top: unset;
-        height: 60rem;
+    .content, .number {
+        width: 600px;
+    }
+    &#sign-up {
         color: black;
         background-image:@bg-job;
         background-attachment:fixed;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    #swipe-right {
+    &#swipe-right {
+        text-align: center;
         background: @Laurel-Green;
         color: @Shell
     }
-    #get-hired {
+    &#get-hired {
         background: @dark-sienna;
         color: @Brass;
     }

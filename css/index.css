@@ -134,6 +134,7 @@ body {
 }
 /* Colors */
 /* Backgrounds */
+/* Breakpoints */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -170,7 +171,7 @@ body {
 .container.root h3 {
   font-weight: 900;
 }
-.container.root .step {
+.step {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,36 +179,35 @@ body {
   width: 100%;
   padding: 4rem 4rem;
 }
-.container.root .step .number {
-  width: 375px;
+.step .number {
   padding-bottom: 1rem;
 }
-.container.root .step .number img {
+.step .number img {
   width: 50px;
 }
-.container.root .step .number#one {
-  padding-bottom: 25rem;
-}
-.container.root .step .number#two {
+.step .number#two {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
 }
-.container.root #sign-up {
-  padding-top: unset;
-  height: 60rem;
+.step .content,
+.step .number {
+  width: 600px;
+}
+.step#sign-up {
   color: black;
   background-image: url("../img/job2.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.container.root #swipe-right {
+.step#swipe-right {
+  text-align: center;
   background: #B6CCA1;
   color: #ecedee;
 }
-.container.root #get-hired {
+.step#get-hired {
   background: #30011E;
   color: #B68F40;
 }
@@ -273,22 +273,6 @@ body {
 .container.art#dollars #dollar2 {
   position: absolute;
   transform: translate(2rem, 1rem);
-}
-.container.steps {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  background: #B68F40;
-}
-.container.steps img {
-  height: 40px;
-  padding: 0 1rem;
-}
-.container.steps .logo {
-  font-family: 'Monoton', cursive;
 }
 header {
   display: flex;
