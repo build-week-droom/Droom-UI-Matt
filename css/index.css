@@ -161,7 +161,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: 'Lato', sans-serif;
   max-width: 100%;
 }
@@ -169,6 +169,22 @@ body {
 .container.root h2,
 .container.root h3 {
   font-weight: 900;
+}
+.container.root .number {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.container.root .number img {
+  width: 50px;
+}
+.container.root .number#one {
+  padding-bottom: 25rem;
+}
+.container.root .number#two {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
 }
 .container.content h2 {
   font-size: 4rem;
@@ -234,8 +250,20 @@ body {
   transform: translate(2rem, 1rem);
 }
 .container.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 80px;
   width: 100%;
+  background: #B68F40;
+}
+.container.steps img {
+  height: 40px;
+  padding: 0 1rem;
+}
+.container.steps .logo {
+  font-family: 'Monoton', cursive;
 }
 .container.root {
   width: 100%;
@@ -274,7 +302,9 @@ body {
   padding: 4rem 4rem;
 }
 .container.root #sign-up {
-  height: 700px;
+  padding-top: unset;
+  height: 60rem;
+  color: black;
   background-image: url("../img/job2.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -282,10 +312,11 @@ body {
 }
 .container.root #swipe-right {
   background: #B6CCA1;
+  color: #ecedee;
 }
 .container.root #get-hired {
   background: #30011E;
-  color: whitesmoke;
+  color: #B68F40;
 }
 header {
   display: flex;

@@ -2,11 +2,24 @@
 
 .container.root {
     .flex();
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: @font;
     max-width: 100%;
     h1, h2, h3 {
         font-weight: 900
+    }
+    .number {
+        width: 100%;
+        padding-bottom: 1rem;
+        img {
+            width: 50px;
+        }
+        &#one {
+            padding-bottom: 25rem;
+        }
+        &#two {
+            .flex(row-reverse, flex-start, center);
+        }
     }
 }
 .container.content {
@@ -55,11 +68,19 @@
             position: absolute;
             transform: translate(2rem, 1rem)
         }
-        #dollar1 {
-        }
+        
     }
 }
 .container.steps {
+    .flex(row, center, center);
     height: 80px;
     width: 100%;
+    background: @Brass;
+    img {
+        height: 40px;
+        padding: 0 1rem;
+    }
+    .logo {
+        font-family: @logo;
+    }
 }
