@@ -18,6 +18,9 @@
         .member {
             .flex();
             .flex-break();
+            color: @font-color;
+            
+            .seperator();
             width: 100%;
             .expand(@mobile, 70rem);
             height: 50rem;
@@ -29,6 +32,15 @@
             h3 {
                 font-size: 3rem;
                 font-weight: 600;
+            }
+            img {
+                width: 300px;
+            }
+            a.gh {
+                color: @font-color;
+                font-size: 5rem;
+                text-decoration: none;
+                cursor: pointer;
             }
             .desc {
                 width: 31rem;

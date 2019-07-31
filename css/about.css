@@ -208,6 +208,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #262626;
   width: 100%;
   height: 50rem;
   padding: 1rem;
@@ -219,6 +220,11 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+}
+.container.root .members .member h3 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #262626;
 }
 @media screen and (min-width: 600px) {
   .container.root .members .member {
@@ -236,6 +242,15 @@ body {
 .container.root .members .member h3 {
   font-size: 3rem;
   font-weight: 600;
+}
+.container.root .members .member img {
+  width: 300px;
+}
+.container.root .members .member a.gh {
+  color: #262626;
+  font-size: 5rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 .container.root .members .member .desc {
   width: 31rem;
