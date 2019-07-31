@@ -1,5 +1,3 @@
-@import (css) "animate";
-
 
 .flex(@direction:column, @justify:center, @align:center) {
     display: flex;
@@ -13,22 +11,29 @@
     background-image: @bg;
 }
 
-.new-frames(@name, @prop, @from, @to) {
+.new-frames(@name, @prop, @value, @newValue){
     @keyframes @name {
         from {
-            @{prop}: @from;
+            @{prop}: @value;
         }
         to {
-            @{prop}: @to;
+            @{prop}: @newValue;
         }
     }
 }
 
-.loop-frames(@name, @duration) {
-    animation-name: @name;
+.apply-frames(@animtion, @duration) {
+    animation-name: @animtion;
     animation-duration: @duration;
-    animation-iteration-count: infinite;
     animation-timing-function: ease-out;
+}
+
+.break-frames(@bp, @frames-one, @frames-two, @loop:infinite, @duration:1s) {
+    .apply-frames(@frames-one, @duration);
+    @media @bp {
+        .apply-frames(@frames-two, @duration);
+    }
+    animation-iteration-count: @loop;
 }
 
 .seperator() {

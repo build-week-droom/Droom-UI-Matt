@@ -1,6 +1,6 @@
 .container.steps {
     .flex(row, center, center);
-    .custom-bg(@Brass, @bg-brass);
+    .custom-bg(@Primary, @bg-steps);
     width: 100%;
     img {
         height: 5rem;
@@ -11,17 +11,15 @@
     }
 }
 
+/* Main Content Areas*/
 .step {
     .flex();
     width: 100%;
     padding: 0 4rem;
     .number {
-        padding-bottom: 1rem;
+        padding-bottom: 4rem;
         img {
             width: 50px;
-        }
-        &#two {
-            .flex(row-reverse, flex-start, center);
         }
     }
     h2 {
@@ -41,40 +39,43 @@
         .expand(@mobile, 48%);
     }
     .flex-break();
+
     &#sign-up {
         .seperator();
-        .content, .btn {
-            .expand(@mobile, 650px)
-        }
         .flex(column, center, flex-start);
         .flex-break(@mobile, column, center, center);
         color: black;
-        background-image:@bg-job;
-        background-attachment:fixed;
+        background-image: @bg-job;
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        .content, .btn {
+            .expand(@mobile, 650px);
+        }
     }
+
     &#swipe-right {
         .flex-break(@mobile, row-reverse, space-between, center);
         text-align: center;
         .custom-bg(@Laurel-Green, @bg-swipe);
-        color: @Shell;
+        color: @Light;
+        .expand(@desktop-small, 0, padding);
         .seperator();
-        .content { 
+        .content {
             .flex(column, center, flex-end);
-            .expand(@desktop-small, @bg-laptop, background-image)
+            .expand(@desktop-small, @bg-laptop, background-image);
         }
-        .expand(@desktop-small, 0, padding);
     }
+
     &#get-hired {
-        .custom-bg(@dark-sienna, @bg-hired);
-        color: @Brass;
+        .custom-bg(@Secondary, @bg-hired);
         .seperator();
-        .content { 
-            .expand(@desktop-small, @bg-shake, background-image)
-        }
         .expand(@desktop-small, 0, padding);
-        .expand(@desktop-small, @Shell, color);
+        color: @Primary;
+        .expand(@desktop-small, @Light, color);
+        .content { 
+            .expand(@desktop-small, @bg-shake, background-image);
+        }
     }
 }
 .container.btn {
@@ -95,6 +96,9 @@
         .expand(@tablet, 4rem 0, padding);
     }
 }
+
+/* SVG ART SECTIONS */
+
 .container.art {
     .flex(row, center, flex-end);
     &#swipe {
@@ -110,9 +114,12 @@
             margin-right: 20rem;
             height: 15rem;
             opacity: .8;
+            left: 3rem;
+            .expand(@tablet, 21rem, height);
             .expand(@desktop-small, 35rem, height);
-            .new-frames(~"swipe", transform, translate(-15rem, 0), translate(8rem, 0)); 
-            .loop-frames(~"swipe", 1000ms);
+            .new-frames(swipesmall, left, 2rem, 16rem);
+            .new-frames(swipe, left, 3rem, 24rem);
+            .break-frames(@tablet, swipesmall, swipe);
         }
     }
     &#dollars {

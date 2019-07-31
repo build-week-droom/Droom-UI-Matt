@@ -1,4 +1,3 @@
-@import "animate";
 html,
 body,
 div,
@@ -267,6 +266,7 @@ header {
   padding: 2rem 0;
   width: 100%;
   background: #ecedee;
+  /* MOBILE HEADER MENU BUTTON*/
 }
 @media screen and (min-width: 600px) {
   header {
@@ -294,7 +294,7 @@ header .menu {
   transform: translate(40vw, 0);
   width: 7rem;
   height: 5rem;
-  border: 1px solid black;
+  border: 1px solid #262626;
   border-radius: 1rem;
 }
 @media screen and (min-width: 600px) {
@@ -305,14 +305,7 @@ header .menu {
 header nav {
   width: 100%;
   display: none;
-}
-header nav a {
-  width: 100%;
-  font-size: 2rem;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  color: #262626;
+  /* Re Enables display by setting it to flex */
 }
 @media screen and (min-width: 600px) {
   header nav {
@@ -332,6 +325,15 @@ header nav a {
     align-items: center;
   }
 }
+header nav a {
+  width: 100%;
+  font-size: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #262626;
+}
+/* HANDLES MOBILE HEADER */
 header:hover {
   padding-bottom: 0;
   position: fixed;
@@ -348,7 +350,7 @@ header:hover {
   }
 }
 header:hover nav {
-  border-top: 1px solid black;
+  border-top: 1px solid #262626;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -357,7 +359,7 @@ header:hover nav {
 }
 header:hover nav a {
   padding: 2rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #262626;
 }
 @media screen and (min-width: 600px) {
   header:hover nav a {
