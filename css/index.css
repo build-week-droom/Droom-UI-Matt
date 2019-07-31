@@ -388,12 +388,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-}
-.container.art#swipe {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .container.art#swipe {
+  .container.art {
     width: 50%;
   }
 }
@@ -462,31 +460,25 @@ body {
   align-items: center;
 }
 .container.art#dollars img {
-  width: 280px;
+  position: absolute;
+  right: 25%;
+  width: 50%;
 }
 @media screen and (min-width: 600px) {
   .container.art#dollars img {
-    width: 18rem;
+    width: 25%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .container.art#dollars img {
-    width: 35rem;
+    right: 12.5%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .container.art#dollars img {
-    width: 50rem;
-  }
+.container.art#dollars img#dollar1 {
+  transform: translate(-5%, -5%);
 }
-@media screen and (min-width: 1400px) {
-  .container.art#dollars img {
-    width: 60rem;
-  }
-}
-.container.art#dollars #dollar2 {
-  position: absolute;
-  transform: translate(2rem, 1rem);
+.container.art#dollars img#dollar2 {
+  transform: translate(5%, 5%);
 }
 header {
   display: flex;
