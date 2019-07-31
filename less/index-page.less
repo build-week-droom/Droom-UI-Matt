@@ -1,0 +1,142 @@
+.container.steps {
+    .flex(row, center, center);
+    .custom-bg(@Primary, @bg-steps);
+    width: 100%;
+    img {
+        height: 5rem;
+        padding: 1rem 0;
+    }
+    .logo {
+        font-family: @logo;
+    }
+}
+
+/* Main Content Areas*/
+.step {
+    .flex();
+    width: 100%;
+    padding: 0 4rem;
+    .number {
+        padding-bottom: 4rem;
+        img {
+            width: 50px;
+        }
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    .content, .art {
+        width: 400px;
+        .flex(column, center, flex-start);
+        height: 30rem;
+        .expand(@mobile, 30rem, height);
+        .expand(@tablet, 40rem, height);
+        .expand(@desktop-small, 60rem, height);
+        .expand(@desktop-small, 0 6rem, padding);
+        .expand(@mobile, 50%)
+    }
+    .content, .art{
+        .expand(@mobile, 48%);
+    }
+    .flex-break();
+
+    &#sign-up {
+        .seperator();
+        .flex(column, center, flex-start);
+        .flex-break(@mobile, column, center, center);
+        color: black;
+        background-image: @bg-job;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .content, .btn {
+            .expand(@mobile, 650px);
+        }
+    }
+
+    &#swipe-right {
+        .flex-break(@mobile, row-reverse, space-between, center);
+        text-align: center;
+        .custom-bg(@Laurel-Green, @bg-swipe);
+        color: @Light;
+        .expand(@desktop-small, 0, padding);
+        .seperator();
+        .content {
+            .flex(column, center, flex-end);
+            .expand(@desktop-small, @bg-laptop, background-image);
+        }
+    }
+
+    &#get-hired {
+        .custom-bg(@Secondary, @bg-hired);
+        .seperator();
+        .expand(@desktop-small, 0, padding);
+        color: @Primary;
+        .expand(@desktop-small, @Light, color);
+        .content { 
+            .expand(@desktop-small, @bg-shake, background-image);
+        }
+    }
+}
+.container.btn {
+    .flex(row, center, center);
+    width: 100%;
+    .btn {
+        font-weight: 900;
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+        background: @Nyanza;
+        border-radius: 1rem;
+        color: @font-color;
+        text-decoration: none;
+        margin: 3rem 0;
+        .expand(@mobile, 3rem 0, padding);
+        .expand(@tablet, 4rem 0, padding);
+    }
+}
+
+/* SVG ART SECTIONS */
+
+.container.art {
+    .flex(row, center, flex-end);
+    width: 100%;
+    .expand(@mobile, 50%);
+    &#swipe {
+        img{
+            height: 25rem;
+            .expand(@tablet, 30rem, height);
+            .expand(@desktop-small, 50rem, height);
+        }
+        img.hand {
+            position: absolute;
+            margin-right: 20rem;
+            height: 15rem;
+            opacity: .8;
+            left: 3rem;
+            .expand(@tablet, 21rem, height);
+            .expand(@desktop-small, 35rem, height);
+            .new-frames(swipesmall, left, 2rem, 16rem);
+            .new-frames(swipe, left, 3rem, 24rem);
+            .break-frames(@tablet, swipesmall, swipe);
+        }
+    }
+    &#dollars {
+        height: 300px;
+        .flex();
+        img {
+            position: absolute;
+            right: 25%;
+            width: 50%;
+            .expand(@mobile, 25%);
+            .expand(@mobile, 12.5%, right);
+            &#dollar1 {
+                transform: translate(-5%, -5%);
+            }
+            &#dollar2 {
+                transform: translate(5%, 5%);
+            }
+        }        
+    }
+}

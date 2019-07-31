@@ -1,0 +1,67 @@
+header {
+    .flex();
+    .flex-break();
+    padding: 2rem 0;
+    width: 100%;
+    background: @Light;
+    h1 {
+        font-family: @logo;
+        font-size: 4rem;
+        .expand(@mobile, 1rem, margin-left);
+    }
+
+    /* MOBILE HEADER MENU BUTTON*/
+    .menu {
+        .flex();
+        .expand(@mobile, none, display);
+        position: absolute;
+        transform: translate(40vw, 0);
+        width: 7rem;
+        height: 5rem;
+        border: 1px solid @font-color;
+        border-radius: 1rem;
+    }
+
+    nav{
+        width: 100%;
+        display: none;
+        .expand(@mobile, 40rem);
+        .expand(@mobile, 1rem, margin-right);
+        .flex-break(); 
+        a {
+            width: 100%;
+            font-size: 2rem;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            color: @font-color;
+        }/* Re Enables display by setting it to flex */
+    }
+}
+
+/* HANDLES MOBILE HEADER */
+header:hover {
+    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    .expand(@mobile, 2rem, padding-bottom);
+    .expand(@mobile, unset, position);
+    nav {
+        border-top: 1px solid @font-color;
+        margin-top: 1rem;
+        .flex(column, space-evenly, center);
+        a {
+            padding: 2rem 0;
+            border-bottom: 1px solid @font-color;
+            .expand(@mobile, 0 0, padding);
+            .expand(@mobile, unset, border)
+        }
+        .flex-break();
+        .expand(@mobile, unset, border);
+        .expand(@mobile, unset, margin-top);
+    }
+    .menu {
+        display: none;
+    }
+}
