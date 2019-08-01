@@ -34,6 +34,9 @@
         font-size: 4rem;
     }
     .content, .art {
+        h3 {
+            .seperator();
+        }
         width: 400px;
         .flex(column, center, flex-start);
         height: 30rem;
@@ -49,7 +52,6 @@
     .flex-break();
 
     &#sign-up {
-        .seperator();
         .flex(column, center, flex-start);
         .flex-break(@mobile, column, center, center);
         color: black;
@@ -68,7 +70,6 @@
         .custom-bg(@Laurel-Green, @bg-swipe);
         color: @Light;
         .expand(@desktop-small, 0, padding);
-        .seperator();
         .content {
             .flex(column, center, flex-end);
             .expand(@desktop-small, @bg-laptop, background-image);
@@ -77,7 +78,6 @@
 
     &#get-hired {
         .custom-bg(@Secondary, @bg-hired);
-        .seperator();
         .expand(@desktop-small, 0, padding);
         color: @Primary;
         .expand(@desktop-small, @Light, color);

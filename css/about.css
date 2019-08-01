@@ -221,11 +221,6 @@ body {
     align-items: center;
   }
 }
-.container.root .members .member h3 {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #262626;
-}
 @media screen and (min-width: 600px) {
   .container.root .members .member {
     width: 70rem;
@@ -242,6 +237,9 @@ body {
 .container.root .members .member h3 {
   font-size: 3rem;
   font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #262626;
 }
 .container.root .members .member img {
   width: 300px;
