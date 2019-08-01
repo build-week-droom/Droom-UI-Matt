@@ -42,9 +42,6 @@
         .expand(@desktop-small, 60rem, height);
         .expand(@desktop-small, 0 6rem, padding);
         .expand(@mobile, 50%);
-        h3 {
-            .seperator();
-        }
     }
     .content, .art{
         .expand(@mobile, 48%);
@@ -62,6 +59,9 @@
         .content, .btn {
             .expand(@mobile, 650px);
         }
+        h3 {
+            .seperator();
+        }
     }
 
     &#swipe-right {
@@ -74,6 +74,9 @@
             .flex(column, center, flex-end);
             .expand(@desktop-small, @bg-laptop, background-image);
         }
+        h3 {
+            .seperator();
+        }
     }
 
     &#get-hired {
@@ -83,6 +86,9 @@
         .expand(@desktop-small, @Light, color);
         .content { 
             .expand(@desktop-small, @bg-shake, background-image);
+        }
+        h3 {
+            .seperator();
         }
     }
 }
@@ -140,10 +146,12 @@
             .expand(@mobile, 25%);
             .expand(@mobile, 12.5%, right);
             &#dollar1 {
-                transform: translate(-5%, -5%);
+                .new-frames(slideup, transform,translate(-5%, -5%),translate(-15%, -15%));
+                .apply-frames(slideup, 1500ms);
             }
             &#dollar2 {
-                transform: translate(5%, 5%);
+                .new-frames(slidedown, transform, translate(5%, 5%),translate(15%, 15%));
+                .apply-frames(slidedown, 1500ms);
             }
         }        
     }

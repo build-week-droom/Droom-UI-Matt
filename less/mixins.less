@@ -22,21 +22,20 @@
     }
 }
 
-.apply-frames(@animtion, @duration) {
+.apply-frames(@animtion, @duration, @loop:infinite) {
     animation-name           : @animtion;
     animation-duration       : @duration;
     animation-timing-function: ease-out;
+    animation-iteration-count: @loop;
 }
 
 //Changes animation based on size
-.break-frames(@bp, @frames-one, @frames-two, @loop: infinite, @duration: 1s) {
-    .apply-frames(@frames-one, @duration);
+.break-frames(@bp, @frames-one, @frames-two, @loop:infinite, @duration: 1s) {
+    .apply-frames(@frames-one, @duration, @loop);
 
     @media @bp {
-        .apply-frames(@frames-two, @duration);
-    }
-
-    animation-iteration-count: @loop;
+        .apply-frames(@frames-two, @duration, @loop);
+    }   
 }
 
 .seperator() {
