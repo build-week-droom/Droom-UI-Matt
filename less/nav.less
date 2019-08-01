@@ -3,7 +3,7 @@ header {
     .flex-break();
     padding: 2rem 0;
     width: 100%;
-    background: @Light;
+    background: @Shell;
     h1 {
         font-family: @logo;
         font-size: 4rem;
@@ -31,6 +31,7 @@ header {
         a {
             width: 100%;
             font-size: 2rem;
+            font-weight: 600;
             display: inline-block;
             text-decoration: none;
             text-align: center;
@@ -45,6 +46,7 @@ header:hover {
     position: fixed;
     top: 0;
     z-index: 20;
+
     .expand(@mobile, 2rem, padding-bottom);
     .expand(@mobile, unset, position);
     nav {

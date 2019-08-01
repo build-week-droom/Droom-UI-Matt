@@ -343,6 +343,7 @@ header nav {
 header nav a {
   width: 100%;
   font-size: 2rem;
+  font-weight: 600;
   display: inline-block;
   text-decoration: none;
   text-align: center;
