@@ -250,6 +250,11 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+@media screen and (min-width: 600px) {
+  .container.root .members .member a.gh {
+    font-size: 6rem;
+  }
+}
 .container.root .members .member .desc {
   width: 31rem;
   padding: 1rem;
