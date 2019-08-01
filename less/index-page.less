@@ -1,13 +1,13 @@
 .container.steps {
-    .flex(row, center, center);
-    .custom-bg(@Primary, @bg-steps);
     width: 100%;
     padding: 1rem 0;
+    .flex(row, center, center);
+    .custom-bg(@Primary, @bg-steps);
     p {
         font-size: 2rem;
-        .expand(@tablet, 2.5rem, font-size);
         padding: 0 1rem;
         margin: 0;
+        .expand(@tablet, 2.5rem, font-size);
     }
     img {
         height: 3rem;
@@ -21,9 +21,9 @@
 
 /* Main Content Areas*/
 .step {
-    .flex();
     width: 100%;
     padding: 0 4rem;
+    .flex();
     .number {
         padding-bottom: 4rem;
         img {
@@ -34,17 +34,17 @@
         font-size: 4rem;
     }
     .content, .art {
-        h3 {
-            .seperator();
-        }
         width: 400px;
-        .flex(column, center, flex-start);
         height: 30rem;
+        .flex(column, center, flex-start);
         .expand(@mobile, 30rem, height);
         .expand(@tablet, 40rem, height);
         .expand(@desktop-small, 60rem, height);
         .expand(@desktop-small, 0 6rem, padding);
-        .expand(@mobile, 50%)
+        .expand(@mobile, 50%);
+        h3 {
+            .seperator();
+        }
     }
     .content, .art{
         .expand(@mobile, 48%);
@@ -52,23 +52,23 @@
     .flex-break();
 
     &#sign-up {
-        .flex(column, center, flex-start);
-        .flex-break(@mobile, column, center, center);
         color: black;
         background-image: @bg-job;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        .flex(column, center, flex-start);
+        .flex-break(@mobile, column, center, center);
         .content, .btn {
             .expand(@mobile, 650px);
         }
     }
 
     &#swipe-right {
-        .flex-break(@mobile, row-reverse, space-between, center);
-        text-align: center;
-        .custom-bg(@Laurel-Green, @bg-swipe);
         color: @Light;
+        text-align: center;
+        .flex-break(@mobile, row-reverse, space-between, center);
+        .custom-bg(@Laurel-Green, @bg-swipe);
         .expand(@desktop-small, 0, padding);
         .content {
             .flex(column, center, flex-end);
@@ -77,9 +77,9 @@
     }
 
     &#get-hired {
+        color: @Primary;
         .custom-bg(@Secondary, @bg-hired);
         .expand(@desktop-small, 0, padding);
-        color: @Primary;
         .expand(@desktop-small, @Light, color);
         .content { 
             .expand(@desktop-small, @bg-shake, background-image);
@@ -108,8 +108,8 @@
 /* SVG ART SECTIONS */
 
 .container.art {
-    .flex(row, center, flex-end);
     width: 100%;
+    .flex(row, center, flex-end);
     .expand(@mobile, 50%);
     &#swipe {
         img{
