@@ -9,7 +9,6 @@
     background      : @bg-color;
     background-image: @bg;
 }
-
 .new-frames(@name, @prop, @value, @newValue) {
     @keyframes @name {
         from {
@@ -29,7 +28,7 @@
     animation-iteration-count: @loop;
 }
 
-//Changes animation based on size
+//Changes animation based on breakpoint
 .break-frames(@bp, @frames-one, @frames-two, @loop:infinite, @duration: 1s) {
     .apply-frames(@frames-one, @duration, @loop);
 
@@ -49,7 +48,7 @@
         width: @value;
     }
 }
-
+/*Adds breakpoints!*/
 .expand(@bp, @value, @property) {
     @media @bp {
         @{property}: @value;
