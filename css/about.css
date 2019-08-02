@@ -348,9 +348,9 @@ header nav a {
   font-size: 2rem;
   font-weight: 600;
   display: inline-block;
-  text-decoration: none;
   text-align: center;
   color: #262626;
+  text-decoration: none;
 }
 /* HANDLES MOBILE HEADER */
 header:hover {
