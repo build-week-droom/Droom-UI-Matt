@@ -93,6 +93,8 @@
         }
     }
 }
+
+/*SIGN UP BUTTON*/
 .container.btn {
     .flex(row, center, center);
     width: 100%;
@@ -115,43 +117,37 @@
 /* SVG ART SECTIONS */
 
 .container.art {
+    position: relative;
     width: 100%;
     .flex(row, center, flex-end);
     .expand(@mobile, 50%);
     &#swipe {
         img{
-            height: 25rem;
+            position: absolute;
+            height: 80%;
             .expand(@tablet, 30rem, height);
             .expand(@desktop-small, 50rem, height);
         }
         img.hand {
-            position: absolute;
-            margin-right: 20rem;
-            height: 15rem;
-            opacity: .8;
-            left: 3rem;
-            .expand(@tablet, 21rem, height);
-            .expand(@desktop-small, 35rem, height);
-            .new-frames(swipesmall, left, 2rem, 16rem);
-            .new-frames(swipe, left, 3rem, 24rem);
-            .break-frames(@tablet, swipesmall, swipe);
+            height: 60%;
+            opacity: .6;
+            .new-frames(swipe, left, 0%, 25%);
+            .apply-frames(swipe, 1s);
         }
     }
     &#dollars {
-        height: 300px;
+        width: 100%;
         .flex();
+        .expand(@mobile, 50%);
         img {
             position: absolute;
-            right: 25%;
-            width: 50%;
-            .expand(@mobile, 25%);
-            .expand(@mobile, 12.5%, right);
+            width: 60%;
             &#dollar1 {
-                .new-frames(slideup, transform,translate(-5%, -5%),translate(-15%, -15%));
+                .new-frames(slideup, transform,translate(-5%, -5%),translate(-20%, -20%));
                 .apply-frames(slideup, 1500ms);
             }
             &#dollar2 {
-                .new-frames(slidedown, transform, translate(5%, 5%),translate(15%, 15%));
+                .new-frames(slidedown, transform, translate(5%, 5%),translate(20%, 20%));
                 .apply-frames(slidedown, 1500ms);
             }
         }        

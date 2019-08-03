@@ -28,15 +28,6 @@
     animation-iteration-count: @loop;
 }
 
-//Changes animation based on breakpoint
-.break-frames(@bp, @frames-one, @frames-two, @loop:infinite, @duration: 1s) {
-    .apply-frames(@frames-one, @duration, @loop);
-
-    @media @bp {
-        .apply-frames(@frames-two, @duration, @loop);
-    }   
-}
-
 .seperator() {
     margin-bottom : 2rem;
     padding-bottom: 1rem;

@@ -135,6 +135,7 @@ body {
 /* Colors */
 /* Backgrounds */
 /* Breakpoints */
+/*Adds breakpoints!*/
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -522,6 +523,7 @@ header:hover .menu {
     border-color: #ecedee;
   }
 }
+/*SIGN UP BUTTON*/
 .container.btn {
   display: flex;
   flex-direction: row;
@@ -553,6 +555,7 @@ header:hover .menu {
 }
 /* SVG ART SECTIONS */
 .container.art {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -565,7 +568,8 @@ header:hover .menu {
   }
 }
 .container.art#swipe img {
-  height: 25rem;
+  position: absolute;
+  height: 80%;
 }
 @media screen and (min-width: 800px) {
   .container.art#swipe img {
@@ -578,71 +582,36 @@ header:hover .menu {
   }
 }
 .container.art#swipe img.hand {
-  position: absolute;
-  margin-right: 20rem;
-  height: 15rem;
-  opacity: 0.8;
-  left: 3rem;
-  animation-name: swipesmall;
+  height: 60%;
+  opacity: 0.6;
+  animation-name: swipe;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
-@media screen and (min-width: 800px) {
-  .container.art#swipe img.hand {
-    height: 21rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container.art#swipe img.hand {
-    height: 35rem;
-  }
-}
-@keyframes swipesmall {
-  from {
-    left: 2rem;
-  }
-  to {
-    left: 16rem;
-  }
-}
 @keyframes swipe {
   from {
-    left: 3rem;
+    left: 0%;
   }
   to {
-    left: 24rem;
-  }
-}
-@media screen and (min-width: 800px) {
-  .container.art#swipe img.hand {
-    animation-name: swipe;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    left: 25%;
   }
 }
 .container.art#dollars {
-  height: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 600px) {
+  .container.art#dollars {
+    width: 50%;
+  }
+}
 .container.art#dollars img {
   position: absolute;
-  right: 25%;
-  width: 50%;
-}
-@media screen and (min-width: 600px) {
-  .container.art#dollars img {
-    width: 25%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .container.art#dollars img {
-    right: 12.5%;
-  }
+  width: 60%;
 }
 .container.art#dollars img#dollar1 {
   animation-name: slideup;
@@ -655,7 +624,7 @@ header:hover .menu {
     transform: translate(-5%, -5%);
   }
   to {
-    transform: translate(-15%, -15%);
+    transform: translate(-20%, -20%);
   }
 }
 .container.art#dollars img#dollar2 {
@@ -669,6 +638,6 @@ header:hover .menu {
     transform: translate(5%, 5%);
   }
   to {
-    transform: translate(15%, 15%);
+    transform: translate(20%, 20%);
   }
 }
