@@ -1,0 +1,58 @@
+.flex(@direction: column, @justify: center, @align: center) {
+    display        : flex;
+    flex-direction : @direction;
+    justify-content: @justify;
+    align-items    : @align;
+}
+
+.custom-bg(@bg-color, @bg) {
+    background      : @bg-color;
+    background-image: @bg;
+}
+.new-frames(@name, @prop, @value, @newValue) {
+    @keyframes @name {
+        from {
+            @{prop}: @value;
+        }
+
+        to {
+            @{prop}: @newValue;
+        }
+    }
+}
+
+.apply-frames(@animtion, @duration, @loop:infinite) {
+    animation-name           : @animtion;
+    animation-duration       : @duration;
+    animation-timing-function: ease-out;
+    animation-iteration-count: @loop;
+}
+
+.seperator() {
+    margin-bottom : 2rem;
+    padding-bottom: 1rem;
+    border-bottom : 1px solid $color;
+}
+
+.expand(@bp: @mobile, @value: 100%) {
+    @media @bp {
+        width: @value;
+    }
+}
+/*Adds breakpoints!*/
+.expand(@bp, @value, @property) {
+    @media @bp {
+        @{property}: @value;
+    }
+}
+
+.flex-break(@bp: @mobile, @direction: row, @justify: space-between, @align: center) {
+    @media @bp {
+        .flex(@direction, @justify, @align)
+    }
+}
+
+.link-reset() {
+    color: @font-color;
+    text-decoration: none;
+}

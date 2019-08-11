@@ -1,0 +1,57 @@
+.container.root {
+    .flex();
+    .team {
+        width: 100%;
+        text-align: center;
+        color: @Shell;
+        .custom-bg(@Secondary, @bg-cogs);
+    }
+}
+
+.container.members {
+    width: 100%;
+    font-size: 2rem;
+    .flex();
+    .custom-bg(@Laurel-Green, @bg-about);
+    h1 {
+        font-size: 6rem;
+        padding: 2rem;
+    }
+    .member {
+        color: @font-color;
+        width: 100%; 
+        height: 50rem;
+        padding: 1rem;
+        .flex();
+        .flex-break();
+        .expand(@mobile, 70rem);
+        .expand(@mobile, 40rem, height);
+        h2 {
+            font-size: 4rem;
+        }
+        h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            .seperator();
+        }
+        img {
+            width: 300px;
+        }
+        a.gh {
+            color: @font-color;
+            font-size: 5rem;
+            text-decoration: none;
+            cursor: pointer;
+            .expand(@mobile, 6rem, font-size);
+        }
+        .desc {
+            width: 31rem;
+            padding: 1rem; 
+            .expand(@mobile, 50%);
+            .flex(column, flex-start, flex-start);
+        }
+        &:nth-child(2n) {
+            .flex-break(@mobile, row-reverse);
+        }
+    }
+}
